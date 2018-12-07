@@ -9,9 +9,9 @@ for i in ${letters[@]}; do
         #construct name for sbatch file being generated
         foo=${i}_${j}".sbatch"
         echo $foo
-        cp slurm_gapfill_template.slurm $foo
-        echo "python3 task_1.py '$i' '$j'" >> $foo
-        echo "python3 task_2.py '$i' '$j'" >> $foo
-        sbatch $foo
+        cp slurm_template.slurm $foo
+        echo "python3 task1.py '$i' '$j'" >> $foo
+        echo "python3 task2.py '$i' '$j'" >> $foo
+#        sbatch $foo
     done
 done
